@@ -16,25 +16,10 @@ class MainPage extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            // color: Colors.amber,
+            color: Colors.amber,
             borderRadius: BorderRadius.circular(15),
           ),
-          child: Center(
-            child: Text(
-              "Hello, Flutter!,Hello, Flutter!,Hello, Flutter!,Hello, Flutter!,Hello, Flutter!",
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 30,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w900,
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.orange,
-                decorationThickness: 2,
-              ),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
+          child: Image.asset("lib/images/test.jpg", width: 100, height: 100),
         ),
       ),
     );
