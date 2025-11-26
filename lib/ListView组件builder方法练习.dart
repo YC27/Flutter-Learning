@@ -24,7 +24,7 @@ class MainPage extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              ListView.separated(
+              ListView.builder(
                 controller: _controller,
                 itemCount: 100,
                 itemBuilder: (final BuildContext context, final int index) {
@@ -38,14 +38,6 @@ class MainPage extends StatelessWidget {
                     ),
                     alignment: Alignment.center,
                     child: Text("$index-Hello Flutter!"),
-                  );
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return Container(
-                    margin: EdgeInsets.only(right: 10, left: 10),
-                    height: 10,
-                    width: double.infinity,
-                    color: Colors.yellow,
                   );
                 },
               ),
