@@ -24,17 +24,13 @@ class MainPage extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              GridView.builder(
+              GridView.count(
+                crossAxisCount: 3,
                 scrollDirection: Axis.vertical,
                 controller: _controller,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 2
-                ),
-                itemCount: 100,
-                itemBuilder: (BuildContext context, int index) {
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                children: List.generate(100, (index) {
                   return Container(
                     margin: EdgeInsets.all(10),
                     height: 50,
@@ -44,9 +40,9 @@ class MainPage extends StatelessWidget {
                       color: Colors.blue,
                     ),
                     alignment: Alignment.center,
-                    child: Text("$index"),
+                    child: Text("$index-Hello Flutter!"),
                   );
-                },
+                }),
               ),
               Positioned(
                 right: 10,
